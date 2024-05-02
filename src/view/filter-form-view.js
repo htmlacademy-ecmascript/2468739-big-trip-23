@@ -1,12 +1,15 @@
 import { createElement } from '../render.js';
 
 const FILTER_TYPES = ['everything', 'future', 'present', 'past'];
+const CHECKED_DEFAULT_TYPE = 'everything';
 
-const createFilterFormItemTemplate = (filterType) => `<div class="trip-filters__filter">
-<input id="filter-${filterType}" class="trip-filters__filter-input  visually-hidden" type="radio" name="trip-filter" value="${filterType}" checked>
-<label class="trip-filters__filter-label" for="filter-${filterType}">${filterType[0].toUpperCase()}${filterType.slice(
-  1
-)}</label>
+const createFilterFormItemTemplate = (
+  filterType
+) => `<div class="trip-filters__filter">
+<input id="filter-${filterType}" class="trip-filters__filter-input  visually-hidden" type="radio" name="trip-filter" value="${filterType}" ${
+  filterType === CHECKED_DEFAULT_TYPE ? 'checked' : ''
+}>
+<label class="trip-filters__filter-label" for="filter-${filterType}">${filterType}</label>
 </div>`;
 
 const createFilterFormTemplate =
