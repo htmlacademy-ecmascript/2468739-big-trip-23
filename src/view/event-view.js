@@ -1,6 +1,6 @@
 import { createElement } from '../render.js';
 
-const createEventListItemTemplate = () => `<li class="trip-events__item">
+const createEventTemplate = () => `<li class="trip-events__item">
 <div class="event">
   <time class="event__date" datetime="2019-03-18">MAR 18</time>
   <div class="event__type">
@@ -38,9 +38,9 @@ const createEventListItemTemplate = () => `<li class="trip-events__item">
 </div>
 </li>`;
 
-export default class EventListItemView {
+export default class EventView {
   getTemplate() {
-    return createEventListItemTemplate();
+    return createEventTemplate();
   }
 
   getElement() {
