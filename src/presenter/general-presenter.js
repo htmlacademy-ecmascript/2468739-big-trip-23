@@ -6,13 +6,17 @@ import EventView from '../view/event-view.js';
 import EventListView from '../view/event-list-view.js';
 import EditEventView from '../view/edit-event-view.js';
 
+const EVENTS_COUNT = 3;
+
 export default class GeneralPresenter {
   eventListComponent = new EventListView();
 
   constructor(
-    tripInfoContainer,
-    filterFormContainer,
-    eventAndSortContainer,
+    {
+      tripInfoContainer,
+      filterFormContainer,
+      eventAndSortContainer,
+    }
   ) {
     this.tripInfoContainer = tripInfoContainer;
     this.filterFormContainer = filterFormContainer;
@@ -26,7 +30,7 @@ export default class GeneralPresenter {
     render(this.eventListComponent, this.eventAndSortContainer);
     render(new EditEventView(), this.eventListComponent.getElement());
 
-    for(let i = 0; i < 3; i++) {
+    for(let i = 0; i < EVENTS_COUNT; i++) {
       render(new EventView(), this.eventListComponent.getElement());
     }
   }

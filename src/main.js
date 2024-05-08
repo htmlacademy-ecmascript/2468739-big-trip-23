@@ -5,9 +5,11 @@ const filterFormContainer = tripInfoContainer.querySelector('.trip-controls__fil
 const eventAndSortContainer = document.querySelector('.trip-events');
 
 const generalPresenter = new GeneralPresenter(
-  tripInfoContainer,
-  filterFormContainer,
-  eventAndSortContainer,
+  {
+    tripInfoContainer,
+    filterFormContainer,
+    eventAndSortContainer,
+  }
 );
 
 generalPresenter.init();
