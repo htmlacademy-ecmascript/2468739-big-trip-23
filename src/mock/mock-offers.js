@@ -1,4 +1,4 @@
-export const offers = [
+const mockOffers = [
   {
     type: 'taxi',
     offers: [
@@ -155,3 +155,10 @@ export const offers = [
     ]
   },
 ];
+
+const getOffers = (eventType) =>
+  mockOffers.find((offerByEventType) => eventType === offerByEventType.type);
+
+export {
+  getOffers,
+};

@@ -1,9 +1,9 @@
-const getRandomElement = (elements) => elements.toSorted(() => 0.5 - Math.random())[0];
+const getRandomArrayElement = (elements) => elements.toSorted(() => 0.5 - Math.random())[0];
 
-const getRandomSomeElements = (elements, count) => {
+const getRandomArraySomeElements = (elements, count) => {
   const newElements = [];
   while (newElements.length < count) {
-    const randomElement = getRandomElement(elements);
+    const randomElement = getRandomArrayElement(elements);
     if (!newElements.includes(randomElement)) {
       newElements.push(randomElement);
     }
@@ -13,6 +13,6 @@ const getRandomSomeElements = (elements, count) => {
 };
 
 export {
-  getRandomElement,
-  getRandomSomeElements,
+  getRandomArrayElement,
+  getRandomArraySomeElements,
 };
