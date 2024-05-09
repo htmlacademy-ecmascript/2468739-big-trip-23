@@ -171,12 +171,13 @@ const mockOffers = [
   },
 ];
 
-const getByTypeOffers = (eventType) =>
-  mockOffers.find((offerByEventType) => eventType === offerByEventType.type);
+const getByTypeEventOffers = (eventType) =>
+  mockOffers.find((offerByEventType) => eventType === offerByEventType.type).offers;
 
-const getOffers = (eventType, eventOffers) =>
-  getByTypeOffers(eventType).offers.filter((offer) => eventOffers.includes(offer.id));
+const getCheckedOffers = (eventType, eventOffers) =>
+  getByTypeEventOffers(eventType).filter((offer) => eventOffers.includes(offer.id));
 
 export {
-  getOffers,
+  getByTypeEventOffers,
+  getCheckedOffers,
 };

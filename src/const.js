@@ -10,9 +10,10 @@ const DESTINATION_DESCRIPTIONS = [
   'Nunc fermentum tortor ac porta dapibus. In rutrum ac purus sit amet tempus.'
 ];
 
-const EVENTS_COUNT = 3;
+const EVENTS_COUNT = 4;
 
 const DateFormat = {
+  DAY_MOUNTH_YEAR_HOURS_MINUTES: 'DD/MM/YYThh:mm',
   MINUTES: 'mm',
   HOURS_MINUTES: 'hh:mm',
   MOUNTH_DAY: 'MMM D',
@@ -20,8 +21,21 @@ const DateFormat = {
   YEAR_MOUNTH_DAY_HOURS_MINUTES: 'YYYY-MM-DDThh:mm',
 };
 
+const EventType = {
+  TAXI: 'taxi',
+  TRAIN: 'train',
+  BUS: 'bus',
+  SHIP: 'ship',
+  DRIVE: 'drive',
+  FLIGHT: 'flight',
+  CHECK_IN: 'check-in',
+  SIGHTSEEING: 'sightseeing',
+  RESTAURANT: 'restaurant',
+};
+
 export {
   DESTINATION_DESCRIPTIONS,
   EVENTS_COUNT,
   DateFormat,
+  EventType,
 };

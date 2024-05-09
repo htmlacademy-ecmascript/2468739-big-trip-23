@@ -15,8 +15,6 @@ const createEventOfferTemplate = (offer) => {
 };
 
 const createEventTemplate = (event) => {
-  console.log(event);
-
   const {
     type,
     dateFrom,
