@@ -5,8 +5,6 @@ import SortFormView from '../view/sort-form-view.js';
 import EventView from '../view/event-view.js';
 import EventListView from '../view/event-list-view.js';
 import EditEventView from '../view/edit-event-view.js';
-import { getDestination } from '../mock/mock-destinations.js';
-import { getOffers } from '../mock/mock-offers.js';
 
 export default class GeneralPresenter {
   eventListComponent = new EventListView();
@@ -33,12 +31,7 @@ export default class GeneralPresenter {
     render(new EditEventView(), this.eventListComponent.getElement());
 
     for(let i = 0; i < this.events.length; i++) {
-      const event = {
-        ...this.events[i],
-        destination: getDestination(this.events[i].destination).name,
-        offers: getOffers(this.events[i].type, this.events[i].offers),
-      };
-      render(new EventView({event}), this.eventListComponent.getElement());
+      render(new EventView({event: this.events[i]}), this.eventListComponent.getElement());
     }
   }
 }
