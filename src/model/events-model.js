@@ -4,7 +4,7 @@ import { getEvent } from '../mock/mock-events.js';
 export default class EventsModel {
   events = Array.from({length: EVENTS_COUNT}, getEvent);
 
-  getEvents () {
+  getEvents() {
     return this.events;
   }
 }

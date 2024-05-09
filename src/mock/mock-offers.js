@@ -3,27 +3,32 @@ const mockOffers = [
     type: 'taxi',
     offers: [
       {
-        id: 1,
-        title: 'Choose the radio station',
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa31',
+        title: 'Choose the radio station-1',
         price: 60,
-      }
+      },
+      {
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa30',
+        title: 'Choose the radio station-2',
+        price: 80,
+      },
     ]
   },
   {
     type: 'train',
     offers: [
       {
-        id: 1 ,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa32',
         title: 'Upgrade express',
         price: 33,
       },
       {
-        id: 2 ,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa33',
         title: 'Upgrade super express',
         price: 43,
       },
       {
-        id: 3 ,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa34',
         title: 'Upgrade',
         price: 23,
       },
@@ -33,27 +38,27 @@ const mockOffers = [
     type: 'bus',
     offers: [
       {
-        id: 1,
+        id: 'b4c3e4e6-9053-42ce-b747-e281114baa90',
         title: 'Upgrade bus-1',
         price: 11,
       },
       {
-        id: 2,
+        id: 'b4c3e4e6-9053-42ce-b747-e281214baa91',
         title: 'Upgrade bus-2',
         price: 21,
       },
       {
-        id: 3,
+        id: 'b4c3e4e6-9053-42ce-b747-e2811414baa92',
         title: 'Upgrade bus-3',
         price: 31,
       },
       {
-        id: 4,
+        id: 'b4c3e4e6-9053-42ce-b747-e281514baa93',
         title: 'Upgrade bus-4',
         price: 41,
       },
       {
-        id: 5,
+        id: 'b4c3e4e6-9053-42ce-b747-e281614baa94',
         title: 'Upgrade bus-5',
         price: 51,
       },
@@ -63,12 +68,12 @@ const mockOffers = [
     type: 'ship',
     offers: [
       {
-        id: 1,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa11',
         title: 'Upgrade ship-1',
         price: 77,
       },
       {
-        id: 2,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa12',
         title: 'Upgrade ship-2',
         price: 87,
       },
@@ -78,22 +83,32 @@ const mockOffers = [
     type: 'drive',
     offers: [
       {
-        id: 1,
-        title: 'Upgrade drive',
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa13',
+        title: 'Upgrade drive-1',
         price: 17,
-      }
+      },
+      {
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa14',
+        title: 'Upgrade drive-2',
+        price: 18,
+      },
+      {
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa15',
+        title: 'Upgrade drive-3',
+        price: 19,
+      },
     ]
   },
   {
     type: 'flight',
     offers: [
       {
-        id: 1,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa71',
         title: 'Upgrade to a business class',
         price: 120,
       },
       {
-        id: 2,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa72',
         title: 'Upgrade to First class',
         price: 150,
       },
@@ -103,18 +118,18 @@ const mockOffers = [
     type: 'check-in',
     offers: [
       {
-        id: 1,
-        title: 'Upgrade',
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa02',
+        title: 'Upgrade-1',
         price: 10,
       },
       {
-        id: 2,
-        title: 'Upgrade',
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa48',
+        title: 'Upgrade-2',
         price: 20,
       },
       {
-        id: 3,
-        title: 'Upgrade',
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa49',
+        title: 'Upgrade-2',
         price: 30,
       },
     ]
@@ -123,7 +138,7 @@ const mockOffers = [
     type: 'sightseeing',
     offers: [
       {
-        id: 1,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa03',
         title: 'Upgrade',
         price: 40,
       }
@@ -133,22 +148,22 @@ const mockOffers = [
     type: 'restaurant',
     offers: [
       {
-        id: 1,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa04',
         title: 'Upgrade',
         price: 50,
       },
       {
-        id: 2,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa61',
         title: 'Upgrade',
         price: 60,
       },
       {
-        id: 3,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa62',
         title: 'Upgrade',
         price: 70,
       },
       {
-        id: 4,
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa63',
         title: 'Upgrade',
         price: 80,
       },
@@ -156,8 +171,11 @@ const mockOffers = [
   },
 ];
 
-const getOffers = (eventType) =>
+const getByTypeOffers = (eventType) =>
   mockOffers.find((offerByEventType) => eventType === offerByEventType.type);
+
+const getOffers = (eventType, eventOffers) =>
+  getByTypeOffers(eventType).offers.filter((offer) => eventOffers.includes(offer.id));
 
 export {
   getOffers,

@@ -12,7 +12,16 @@ const DESTINATION_DESCRIPTIONS = [
 
 const EVENTS_COUNT = 3;
 
+const DateFormat = {
+  MINUTES: 'mm',
+  HOURS_MINUTES: 'hh:mm',
+  MOUNTH_DAY: 'MMM D',
+  YEAR_MOUNTH_DAY: 'YYYY-MM-DD',
+  YEAR_MOUNTH_DAY_HOURS_MINUTES: 'YYYY-MM-DDThh:mm',
+};
+
 export {
   DESTINATION_DESCRIPTIONS,
   EVENTS_COUNT,
+  DateFormat,
 };
