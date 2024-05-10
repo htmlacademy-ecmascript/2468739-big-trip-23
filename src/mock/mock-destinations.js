@@ -15,7 +15,15 @@ const mockDestinations = [
     pictures: [
       {
         src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
-        description: 'Lima parliament building',
+        description: 'Lima-1 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Lima-2 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Lima-3 parliament building',
       },
     ],
   },
@@ -26,7 +34,11 @@ const mockDestinations = [
     pictures: [
       {
         src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
-        description: 'Tokyo parliament building',
+        description: 'Tokyo-1 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Tokyo-2 parliament building',
       },
     ],
   },
@@ -48,7 +60,19 @@ const mockDestinations = [
     pictures: [
       {
         src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
-        description: 'Canberra parliament building',
+        description: 'Canberra-1 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Canberra-4 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Canberra-2 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Canberra-3 parliament building',
       },
     ],
   },
@@ -81,15 +105,26 @@ const mockDestinations = [
     pictures: [
       {
         src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
-        description: 'Paris parliament building',
+        description: 'Paris-1 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Paris-2 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Paris-3 parliament building',
+      },
+      {
+        src: `https://loremflickr.com/248/152?random=${Math.random() * 100 + 1}`,
+        description: 'Paris-4 parliament building',
       },
     ],
   },
 ];
 
-const getDestination = (destinationId) =>
-  mockDestinations.find((destination) => destinationId === destination.id);
+const loadDestinations = () => mockDestinations;
 
 export {
-  getDestination,
+  loadDestinations,
 };

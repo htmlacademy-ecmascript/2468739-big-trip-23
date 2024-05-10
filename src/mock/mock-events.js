@@ -1,6 +1,3 @@
-import { EventType } from '../const.js';
-import { getRandomArrayElement } from '../utils.js';
-
 const mockEvents = [
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2808c',
@@ -13,7 +10,7 @@ const mockEvents = [
       'b4c3e4e6-9053-42ce-b747-e281314baa31',
       'b4c3e4e6-9053-42ce-b747-e281314baa30',
     ],
-    'type': EventType.TAXI
+    'type': 'taxi',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2807c',
@@ -27,7 +24,7 @@ const mockEvents = [
       'b4c3e4e6-9053-42ce-b747-e281314baa33',
       'b4c3e4e6-9053-42ce-b747-e281314baa34',
     ],
-    'type': EventType.TRAIN
+    'type': 'train',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2806c',
@@ -37,7 +34,7 @@ const mockEvents = [
     'destination': 'bfa5cb75-a1fe-4b77-a83c-0e528e910e02',
     'isFavorite': false,
     'offers': [],
-    'type': EventType.BUS
+    'type': 'bus',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2805c',
@@ -50,7 +47,7 @@ const mockEvents = [
       'b4c3e4e6-9053-42ce-b747-e281314baa11',
       'b4c3e4e6-9053-42ce-b747-e281314baa12',
     ],
-    'type': EventType.SHIP
+    'type': 'ship',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2804c',
@@ -64,7 +61,7 @@ const mockEvents = [
       'b4c3e4e6-9053-42ce-b747-e281314baa14',
       'b4c3e4e6-9053-42ce-b747-e281314baa15',
     ],
-    'type': EventType.DRIVE
+    'type': 'drive',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2803c',
@@ -74,7 +71,7 @@ const mockEvents = [
     'destination': 'bfa5cb75-a1fe-4b77-a83c-0e528e910e07',
     'isFavorite': true,
     'offers': [],
-    'type': EventType.FLIGHT
+    'type': 'flight',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2802c',
@@ -86,7 +83,7 @@ const mockEvents = [
     'offers': [
       'b4c3e4e6-9053-42ce-b747-e281314baa02'
     ],
-    'type': EventType.CHECK_IN
+    'type': 'check-in',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2801c',
@@ -98,7 +95,7 @@ const mockEvents = [
     'offers': [
       'b4c3e4e6-9053-42ce-b747-e281314baa03'
     ],
-    'type': EventType.SIGHTSEEING
+    'type': 'sightseeing',
   },
   {
     'id': 'f4b62099-293f-4c3d-a702-94eec4a2800c',
@@ -110,12 +107,12 @@ const mockEvents = [
     'offers': [
       'b4c3e4e6-9053-42ce-b747-e281314baa04'
     ],
-    'type': EventType.RESTAURANT
+    'type': 'restaurant',
   },
 ];
 
-const getEvent = () => getRandomArrayElement(mockEvents);
+const loadEvents = () => mockEvents;
 
 export {
-  getEvent,
+  loadEvents,
 };

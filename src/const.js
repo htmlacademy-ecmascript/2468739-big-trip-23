@@ -13,12 +13,12 @@ const DESTINATION_DESCRIPTIONS = [
 const EVENTS_COUNT = 4;
 
 const DateFormat = {
-  DAY_MOUNTH_YEAR_HOURS_MINUTES: 'DD/MM/YYThh:mm',
+  DAY_MOUNTH_YEAR_HOURS_MINUTES: 'DD/MM/YY HH:mm',
   MINUTES: 'mm',
-  HOURS_MINUTES: 'hh:mm',
+  HOURS_MINUTES: 'HH:mm',
   MOUNTH_DAY: 'MMM D',
   YEAR_MOUNTH_DAY: 'YYYY-MM-DD',
-  YEAR_MOUNTH_DAY_HOURS_MINUTES: 'YYYY-MM-DDThh:mm',
+  YEAR_MOUNTH_DAY_HOURS_MINUTES: 'YYYY-MM-DDTHH:mm',
 };
 
 const EventType = {
@@ -33,9 +33,21 @@ const EventType = {
   RESTAURANT: 'restaurant',
 };
 
+const EVENT_BLANK = {
+  'id': null,
+  'basePrice': null,
+  'dateFrom': null,
+  'dateTo': null,
+  'destination': null,
+  'isFavorite': null,
+  'offers': [],
+  'type': 'flight',
+};
+
 export {
   DESTINATION_DESCRIPTIONS,
   EVENTS_COUNT,
   DateFormat,
   EventType,
+  EVENT_BLANK,
 };
